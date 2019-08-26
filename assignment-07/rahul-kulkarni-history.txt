@@ -1,0 +1,1000 @@
+   86  ! bq query --use_legacy_sql=FALSE 'SELECT trip_id, start_station_name, end_station_name, count(statrt_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY trip_id, start_station_name, end_station_name ORDER BY trip_freq LIMIT 10'
+   87  ! bq query --use_legacy_sql=FALSE 'SELECT trip_id, start_station_name, end_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY trip_id, start_station_name, end_station_name ORDER BY trip_freq LIMIT 10'
+   88  ! bq query --use_legacy_sql=FALSE 'SELECT trip_id, start_station_name, end_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY trip_freq LIMIT 10'
+   89  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, end_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY trip_freq LIMIT 10'
+   90  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY trip_freq LIMIT 10'
+   91  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY ASC trip_freq LIMIT 10'
+   92  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY trip_freq LIMIT ASC 10'
+   93  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY trip_freq ASC LIMIT 10'
+   94  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY trip_freq DSC LIMIT 10'
+   95  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY trip_freq DESC LIMIT 10'
+   96  bq query --use_legacy_sql=false 'SELECT min(time), max(time) FROM `bigquery-public-data.san_francisco.bikeshare_status`' query --use_legacy_sql=FALSE SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) 
+   97  as subsciber_type_percent, subscriber_type
+   98  FROM `bigquery-public-data.san_francisco.bikeshare_trips` 
+   99  bq query --use_legacy_sql=false 'SELECT min(time), max(time) FROM `bigquery-public-data.san_francisco.bikeshare_status`' query --use_legacy_sql=FALSE SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`))  query --use_legacy_sql=FALSE 'SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber
+  100  _type_percent, subscriber_type FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY subscriber_type'
+  101  SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber_type_percent, subscriber_type FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY subscriber_type
+  102  bq query --use_legacy_sql=false 'SELECT min(time), max(time) FROM `bigquery-public-data.san_francisco.bikeshare_status`' query --use_legacy_sql=FALSE SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`))  query --use_legacy_sql=FALSE 'SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber query --use_legacy_sql=FALSE 'SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber_type_percent, subscriber_type FROM
+  103  vi
+  104  SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber_type_percent, subscriber_type FROM `bigquery-public-data.san_fra
+  105  ncisco.bikeshare_trips` GROUP BY subscriber_type
+  106  SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber_type_percent, subscriber_type FROM `bigquery-public-data.san_fra
+  107  SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber_type_percent, subscriber_type FROM
+  108  SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber_type_percent, subscriber_type FROM  `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY subscriber_type
+  109  ! bq query --use_legacy_sql=FALSE 'SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber_type_percent, subscriber_type FROM  `bigquery-public-data.san_francisco.bikesha
+  110  re_trips` GROUP BY subscriber_type
+  111  '
+  112  ! bq query --use_legacy_sql=FALSE 'SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber_type_percent, subscriber_type FROM  `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY subscriber_type'
+  113  keshare_trips` GROUP BY subscriber_type'^C
+  114  rahul_kulkarni@myw205tools:~$  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY trip_freq DESC LIMIT 10'eshare_trips` GROUP BY subscriber_type'^C
+  115  rahul_kulkarni@myw205tools:~$  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY tri
+  116  p_freq DESC LIMIT 10' ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` GROUP BY start_station_name ORDER BY tri
+  117  p_freq DESC LIMIT 10'
+  118  vi
+  119  cat q
+  120  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, end_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` WHERE start_station_name='San Francisco Caltrain (Townsend at 4th)' OR start_station_name='San Francisco Caltrain 2 (330 Townsend)' OR start_station_name='Harry Bridges Plaza (Ferry Building)' GROUP BY start_station_name, end_station_name ORDER BY trip_freq DESC LIMIT 10'
+  121  bq query --use_legacy_sql=false 'SELECT min(time), max(time) FROM `bigquery-public-data.san_francisco.bikeshare_status`' query --use_legacy_sql=FALSE SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`))  query --use_legacy_sql=FALSE 'SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber query --use_legacy_sql=FALSE 'SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber_type_percent, subscriber_type FROM query --use_legacy_sql=FALSE 
+  122  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, end_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` WHERE start_station_nam
+  123  e='San Francisco Caltrain (Townsend at 4th)' OR start_station_name='San Francisco Caltrain 2 (330 Townsend)' OR start_station_name='Harry Bridges Plaza (Ferry Building)' GROUP BY start_station_name, end_station_name ORDER BY trip_
+  124  freq DESC LIMIT 10'vi q
+  125  vi q
+  126  bq query --use_legacy_sql=false 'SELECT min(time), max(time) FROM `bigquery-public-data.san_francisco.bikeshare_status`' query --use_legacy_sql=FALSE SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`))  query --use_legacy_sql=FALSE 'SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber query --use_legacy_sql=FALSE 'SELECT  (count(trip_id) * 100/ (select count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`)) as subsciber_type_percent, subscriber_type FROM query --use_legacy_sql=FALSE  query
+  127  ! bq
+  128  ! bq query
+  129  ! bq query | q
+  130  vi q
+  131  ! bq query | cat q
+  132  cat q | ! bq query
+  133  cat q | bq query
+  134  vi q
+  135  cat q | bq query
+  136  bq query
+  137  bq query "$(cat q)
+  138  bq query "$(cat q)"
+  139  vi q
+  140  bq query "$(cat q)"
+  141  vi q1
+  142  ! bq query($cat q1)"
+  143  ! bq query "($cat q1)"
+  144  bq query
+  145  bq query query
+  146  bq
+  147  ls
+  148  cat q1 | bq query
+  149  vi q
+  150  'SELECT start_station_name, end_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` WHERE start_station_name='San Francisco Caltrain (Townsend at 4th)' OR start_station_na
+  151  me='San Francisco Caltrain 2 (330 Townsend)' OR start_station_name='Harry Bridges Plaza (Ferry Building)' GROUP BY start_station_name, end_station_name ORDER BY trip_freq DESC LIMIT 10'
+  152  ! bq query 
+  153  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, end_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` WHERE start_station_name='San Francisco Caltrain (Townsen
+  154  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, end_station_name, count(start_station_name) as trip_freq FROM `bigquery-public-data.san_francisco.bikeshare_trips` WHERE start_station_nam
+  155  e='San Francisco Caltrain (Townsen
+  156  ! bq query --use_legacy_sql=FALSE SELECT start_station_name, end_station_name, count(start_station_name) as trip_freq  FROM `bigquery-public-data.san_francisco.bikeshare_trips` WHERE start_station_name='San Francisco Caltrain (Townsend at 4th)' OR start_station_name='San Francisco Caltrain 2 (330 Townsend)' OR start_station_name='Harry Bridges Plaza (Ferry Building)'GROUP BY start_station_name, end_station_name ORDER BY trip_freq DESC LIMIT 10
+  157  ! bq query --use_legacy_sql=FALSE SELECT start_station_name, end_station_name, count(start_station_name) as trip_freq  FROM `bigquery-public-data.san_francisco.bikeshare_trips` WHERE start_station_name='San Francisco Caltrain (Townsend at 4th)' OR start_station_name='San Francisco Caltrain 2 (330 Townsend)' OR start_station_name='Harry Bridges Plaza (Ferry Building)'GROUP BY start_station_name, end_station_name ORDER BY trip_freq DESC LIMIT 10'
+  158  ! bq query --use_legacy_sql=FALSE 'SELECT start_station_name, end_station_name, count(start_station_name) as trip_freq  FROM `bigquery-public-data.san_francisco.bikeshare_trips` WHERE start_station_name='San Francisco Caltrain (Townsend at 4th)' OR start_station_name='San Francisco Caltrain 2 (330 Townsend)' OR start_station_name='Harry Bridges Plaza (Ferry Building)'GROUP BY start_station_name, end_station_name ORDER BY trip_freq DESC LIMIT 10'
+  159  bq query < q
+  160  ! bq query --use_legacy_sql=FALSE < q
+  161  vi q
+  162  clear
+  163  vi q2
+  164  ls
+  165  vi q2
+  166  ls
+  167  history
+  168  ! bq query --use_legacy_sql=FALSE < q2
+  169  vi q1
+  170  ls
+  171  ! bq query --use_legacy_sql=FALSE < q1
+  172  vi q
+  173  ! bq query --use_legacy_sql=FALSE < q
+  174  vi q
+  175  vi q4
+  176  ! bq query --use_legacy_sql=FALSE < q4
+  177  vi q4
+  178  bq query --use_legacy_sql=false 'SELECT count(*) FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+  179  bq query --use_legacy_sql=false 'SELECT count(*) as dataset_size FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+  180  SELECT min(time), max(time)
+  181  bq query SELECT min(time), max(time)
+  182  bq query 'SELECT min(time), max(time) FROM `bigquery-public-data.san_francisco.bikeshare_status`
+  183  bq query 'SELECT min(time), max(time) FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+  184  vi q5
+  185  bq query < q5
+  186  vi q5
+  187  bq query < q5
+  188  vi q5
+  189  bq query < q5
+  190  ! bq query --use_legacy_sql=false < q5
+  191  vi q5
+  192  ! bq query --use_legacy_sql=false < q5
+  193  vi q5
+  194  ! bq query --use_legacy_sql=false < q5
+  195  vi q5
+  196  ! bq query --use_legacy_sql=false < q5
+  197  vi q5
+  198  ! bq query --use_legacy_sql=false < q5
+  199  vi q5
+  200  vi q6
+  201  ! bq query --use_legacy_sql=false < q6
+  202  vi q6
+  203  ! bq query --use_legacy_sql=false < q6
+  204  ls
+  205  cd w205
+  206  ls
+  207  cd assignment-02-rahul-kulkarni/
+  208  ls
+  209  git status
+  210  git add README.md 
+  211  export EDITOR=vi
+  212  git commit
+  213  git push
+  214  git status
+  215  git add README.md 
+  216  git commit
+  217  git push
+  218  ls
+  219  cd w207
+  220  clear
+  221  ls
+  222  cd ucb-w207-applied-ml/
+  223  ls
+  224  cd tutorials/
+  225  ls
+  226  cd ..
+  227  ls
+  228  cd ..
+  229  ls
+  230  cd ..
+  231  ls
+  232  mkdir w205-rk
+  233  cd w205-rk/
+  234  cd ..
+  235  ls
+  236  mv q* w205-rk/
+  237  ls
+  238  mkdir w207-rk
+  239  ls
+  240  cd w207
+  241  ls
+  242  cd ..
+  243  ls
+  244  cd w205
+  245  ls
+  246  clear
+  247  ls
+  248  cd ..
+  249  ls
+  250  w207
+  251  ls
+  252  history
+  253  bq query --use_legacy_sql=false 'SELECT count(*) FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+  254  docker run -it --rm -v ~/w205:/w205 midsw205/base pwd
+  255  docker run -it --rm -v ~/w205:/w205 midsw205/base:latest bash
+  256  docker ps
+  257  docker ps -a
+  258  docker images
+  259  pwd
+  260  ls
+  261  cd w205
+  262  ls
+  263  cd assignment-04-rahul-kulkarni/
+  264  ls
+  265  git branch assignment
+  266  git status
+  267  git checkout assignment
+  268  ls
+  269  vi README.md 
+  270  git add README.md 
+  271  git commit -m "test"
+  272  git push origin assignment
+  273  git status
+  274  ls
+  275  cd w205-rk/
+  276  ls
+  277  vi q7
+  278  vi q1
+  279  history
+  280  ! bq query --use_legacy_sql=false < q7
+  281  ls
+  282  vi q7
+  283  vi q6
+  284  grep -i limit *
+  285  vi q7
+  286  ! bq query --use_legacy_sql=false < q7
+  287  vi q7
+  288  ! bq query --use_legacy_sql=false < q7
+  289  vi q7
+  290  ! bq query --use_legacy_sql=false < q7
+  291  vi q7
+  292  ! bq query --use_legacy_sql=false < q7
+  293  vi q7
+  294  vi q8
+  295  ! bq query --use_legacy_sql=false < q8
+  296  vi q8
+  297  ! bq query --use_legacy_sql=false < q8
+  298  vi q8
+  299  ! bq query --use_legacy_sql=false < q8
+  300  vi q8
+  301  ! bq query --use_legacy_sql=false < q8
+  302  vi q8
+  303  ! bq query --use_legacy_sql=false < q8
+  304  vi q8
+  305  ! bq query --use_legacy_sql=false < q8
+  306  vi q8
+  307  ! bq query --use_legacy_sql=false < q8
+  308  vi q8
+  309  ! bq query --use_legacy_sql=false < q8
+  310  vi q8
+  311  cp q8 q9
+  312  vi q9
+  313  ! bq query --use_legacy_sql=false < q9
+  314  vi q9
+  315  ! bq query --use_legacy_sql=false < q9
+  316  ! bq query --use_legacy_sql=false < q9vi q9
+  317  vi q9
+  318  vi q8
+  319  ! bq query --use_legacy_sql=false < q8
+  320  vi q8
+  321  vi q7
+  322  cp q9 q10
+  323  vi q10
+  324  ! bq query --use_legacy_sql=false < q10
+  325  vi q10
+  326  ! bq query --use_legacy_sql=false < q10
+  327  vi q10
+  328  cp q10 q11
+  329  vi q11
+  330  ! bq query --use_legacy_sql=false < q11
+  331  vi q11
+  332  vi q10
+  333  vi q9
+  334  vi q8
+  335  ls
+  336  vi q9
+  337  ls
+  338  vi q1
+  339  ls
+  340  vi q9
+  341  ls
+  342  vi q8
+  343  ls
+  344  vi q10
+  345  vi q11
+  346  vi q12
+  347  ! bq query --use_legacy_sql=false < q12
+  348  vi q12
+  349  vi q13
+  350  ! bq query --use_legacy_sql=false < q13
+  351  vi q13
+  352  clear
+  353  ls
+  354  cd ..
+  355  ls
+  356  cd w205
+  357  ls
+  358  cd assignment-03-rahul-kulkarni/
+  359  ls
+  360  git status
+  361  vi README.md 
+  362  clear
+  363  git add README.md 
+  364  export EDITOR=vi
+  365  git commit
+  366  git push
+  367  pwd
+  368  ls
+  369  cd w207-rk/
+  370  ls
+  371  cd ..
+  372  ls
+  373  git clone https://github.com/rahul-kulkarni/w207-MachineLearning-Projects.git
+  374  ls
+  375  cd w207-MachineLearning-Projects/
+  376  ls
+  377  cp -r ../w207/ucb-w207-applied-ml/projects/* .
+  378  ls
+  379  mv firstname_lastname_p1.ipynb rahul_kulkarni_p1.ipynb
+  380  git status
+  381  git add *
+  382  git status
+  383  export EDITOR=vi
+  384  git commit
+  385  git push
+  386  ls
+  387  pwd
+  388  sudo chown - r rahul_kulkarni:rahul_kulkarni ~/205
+  389  sudo chown -R rahul_kulkarni:rahul_kulkarni ~/205
+  390  sudo chown -R rahul_kulkarni:rahul_kulkarni ~/w205
+  391  cd ~/w205/course-content
+  392  git pull --all
+  393  docker ps -a
+  394  docker pull midsw205/base:latest
+  395  docker pull redis
+  396  docker pull confluentinc/cp-zookeeper:latest
+  397  docker pull confluentinc/cp-kafka:latest
+  398  docker pull midsw205/spark-python:0.0.5
+  399  docker pull midsw205/spark-python:0.0.6
+  400  docker pull midsw205/cdh-minimal:latest
+  401  docker pull midsw205/hadoop:0.0.2
+  402  docker ps -a
+  403  docker rm -f
+  404  docker rm -f gracious_dirac
+  405  docker ps -a
+  406  docker rm -f rec
+  407  ursing_borg
+  408  docker rm -f recursing_borg
+  409  docker ps -a
+  410  docker rm -f redis
+  411  docker ps -a
+  412  docker rm -f redis
+  413  docker ps -a
+  414  docker-compose -ps
+  415  docker-compose ps
+  416  cd ..
+  417  ls
+  418  cd redis-standalone/
+  419  docker-compose ps
+  420  docker ps -a
+  421  docker-compose logs redis
+  422  ipython
+  423  docker-compose logs redis
+  424  docker-compose exec mids bash
+  425  ipython
+  426  docker-compose down
+  427  docker ps -a
+  428  cd
+  429  mkdir ~/w205/redis-cluster
+  430  cd ~/w205/redis-cluster
+  431  cp ../course-content/05-Storing-Data-II/example-1-docker-compose.yml docker-compose.yml
+  432  docker-compose up -d
+  433  docker compose-ps
+  434  docker-compose ps
+  435  vi docker-compose.yml 
+  436  docker-compose logs redis
+  437  docker-compose exec mids bash
+  438  docker-compose down
+  439  docker-compose ps
+  440  cd ..
+  441  cd redis-standalone/
+  442  ls
+  443  cp ../course-content/05-Storing-Data-II/example-0-docker-compose.yml docker-compose.yml
+  444  cd w205
+  445  ls
+  446  cd course-content/
+  447  ls
+  448  cd /var/lib/docker/
+  449  ls
+  450  cd /var/lib/docker/
+  451  ls
+  452  cd -
+  453  pwd
+  454  sudo ls
+  455  cd -
+  456  cd 
+  457  pwd
+  458  ls
+  459  docker run redis
+  460  docker run -d redis
+  461  docker run -d --name redis redis
+  462  docker run -d --name redis -p 6379:6379 redis
+  463  mkdir ~/w205/redis-standalone
+  464  cd ~/w205/redis-standalone
+  465  cp ../course-content/05-Storing-Data-II/example-0-docker-compose.yml docker-compose.yml
+  466  ls
+  467  vi docker-compose.yml 
+  468  ls
+  469  docker compose up -d
+  470  docker-compose up -d
+  471  docker compose ps -a
+  472  docker compose p -a
+  473  docker-compose ps
+  474  cp ../course-content/05-Storing-Data-II/example-2-docker-compose.yml docker-compose.yml
+  475  ls
+  476  cd ..
+  477  ls
+  478  cd redis-
+  479  cd redis-cluster/
+  480  cp ../course-content/05-Storing-Data-II/example-2-docker-compose.yml docker-compose.yml
+  481  docker-compose up -d
+  482  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  483  docker-compose ps
+  484  docker-compose down
+  485  docker-compose ps
+  486  cp ../course-content/05-Storing-Data-II/example-3-docker-compose.yml docker-compose.yml
+  487  docker-compose up -d
+  488  docker-compose logs mids
+  489  docker-compose down
+  490  docker-compose ps
+  491  docker ps -a
+  492  cp ../course-content/05-Storing-Data-II/example-4-docker-compose.yml docker-compose.yml
+  493  vi docker-compose.yml 
+  494  ls
+  495  cd ~/w205/
+  496  curl -L -o trips.csv https://goo.gl/QvHLKe
+  497  cd ~/w205/redis-cluster
+  498  docker-compose up -d
+  499  docker-compose logs mids
+  500  docker-compose down
+  501  ls
+  502  cd w205
+  503  ls
+  504  cd redis-cluster/
+  505  docker-compose up -d
+  506  docker-compose logs mids
+  507  ls
+  508  pwd
+  509  cd w205
+  510  ls
+  511  cp trips.csv assignment-04-rahul-kulkarni/
+  512  ls
+  513  cd assignment-04-rahul-kulkarni/
+  514  ls
+  515  git status
+  516  git nranch
+  517  git branch
+  518  git add Rahul_Kulkarni_Assignment_04.ipynb
+  519  git checkout  04-assignment-example.ipynb
+  520  git status
+  521  export EDITOR=vi
+  522  git commit
+  523  git push
+  524  git push --set-upstream origin assignment
+  525  docker ps
+  526  docker ps -a
+  527  pwd
+  528  ls
+  529  cd w205
+  530  ls
+  531  cd assignment-04-rahul-kulkarni/
+  532  ls
+  533  pwd
+  534  ls
+  535  cd w207
+  536  ls
+  537  cd ..
+  538  ls
+  539  cd w205
+  540  ls
+  541  cd assignment-04-rahul-kulkarni/
+  542  ls
+  543  git branch
+  544  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  545  docker ps
+  546  docker-compose logs mids
+  547  cd ..
+  548  ls
+  549  lswd
+  550  ls
+  551  cd redis-cluster/
+  552  ls
+  553  docker-compose logs redis
+  554  cd
+  555  docker run -it --rm -v ~/w205:/w205 midsw205/base:latest bash
+  556  mkdir ~/w205/kafka
+  557  cd ~/w205/kafka
+  558  ls
+  559  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic foo --from-beginning --max-messages 42
+  560  docker-compose logs -f kafka
+  561  ls
+  562  clear
+  563  pwd
+  564  ls
+  565  cd w205
+  566  ls
+  567  docker-compose logs mids
+  568  ls
+  569  cd redis-cluster/
+  570  ls
+  571  docker-compose logs mids
+  572  docker compose donw
+  573  docker compose down
+  574  docker-compose down
+  575  docker ps
+  576  ls
+  577  cd ..
+  578  ls
+  579  cd redis-standalone/
+  580  ls
+  581  docker-compose -d
+  582  docker-compose down
+  583  docker ps
+  584  cd ..
+  585  ls
+  586  cd 
+  587  docker ps
+  588  pwd
+  589  ls
+  590  cd w205
+  591  ls
+  592  cd redis-standalone/
+  593  ls
+  594  cd ..
+  595  docker images
+  596  docker run -it --rm -v ~/w205:/w205 midsw205/base pwd
+  597  docker ps
+  598  docker compose-ps
+  599  docker compose
+  600  docker -compose
+  601  docker images
+  602  ls
+  603  cd redis-cluster/
+  604  ls
+  605  docker compose ps
+  606  docker-compose ps
+  607  cd ..
+  608  ls
+  609  cd redis-standalone/
+  610  ls
+  611  docker-compose ps
+  612  cd ..
+  613  ls
+  614  docker ps
+  615  docker rm -f wizardly_volhard
+  616  docker ps
+  617  user
+  618  username
+  619  user
+  620  whoami
+  621  passwd
+  622  docker ps -a
+  623  docker pull confluentinc/cp-zookeeper:latest
+  624  docker pull confluentinc/cp-kafka:latest
+  625  docker pull midsw205/hadoop:0.0.2
+  626  docker pull midsw205/presto:0.0.1
+  627  cat junk.csv | sort | uniq | wc -l
+  628  mkdir ~/w205/kafka
+  629  cd ~/w205/kafka
+  630  clear
+  631  vi docker-compose.yaml
+  632  ls
+  633  cat docker-compose.yaml 
+  634  mv docker-compose.yaml docker-compose.yml
+  635  docker-compose up -d
+  636  docker-compose ps
+  637  docker-compose logs zookeeper | grep -i binding
+  638  docker-compose logs kafka | grep -i started
+  639  docker-compose
+  640  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper localhost:32181
+  641  docker-compose exec kafka kafka-topics --help
+  642  dockerocker-compose exec kafka kafka-topics --describe --topic foo --zookeeper localhost:32181
+  643  ocker-compose exec kafka kafka-topics --describe --topic foo --zookeeper localhost:32181
+  644  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper localhost:32181
+  645  docker-compose exec kafka bash -c "seq 42 | kafka-console-producer --request-required-acks 1 --broker-list localhost:29092 --topic foo && echo 'Produced 42 messages.'"
+  646  seq 42
+  647  seq 3
+  648  docker-compose exec kafka bash -c "seq 42 | kafka-console-producer --request-required-acks 1 --broker-list localhost:29092 --topic foo && echo 'Produced 42 messages.'"
+  649  docker-compose exec kafka bash -c "seq 42 | kafka-console-producer --request-required-acks 1 --broker-list localhost:29092 --topic foo && echo 'Produced 42 messages.'"docker-compose down
+  650  docker-compose down
+  651  docker ps-a
+  652  docker ps
+  653  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/kafka/
+  654  ls
+  655  vi docker-compose.yml 
+  656  curl -L -o github-example-large.json https://goo.gl/Y4MD58
+  657  ls -l
+  658  head docker-compose.yml 
+  659  head github-example-large.json 
+  660  docker-compose up -d
+  661  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  662  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  663  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json"
+  664  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.'"
+  665  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c"
+  666  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  667  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic foo --from-beginning --max-messages 42
+  668  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e"
+  669  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e" | wc -l
+  670  docker-compose down
+  671  ls
+  672  clear
+  673  pwd
+  674  ls
+  675  cd w205
+  676  ls
+  677  cd assignment-04-rahul-kulkarni/
+  678  ls
+  679  cp Rahul_Kulkarni_Assignment_04.ipynb ..
+  680  cd ..
+  681  ls
+  682  cd assignment-04-rahul-kulkarni/
+  683  ls
+  684  cd ..
+  685  ls
+  686  cd ..
+  687  ls
+  688  clear
+  689  ls
+  690  cd w205-rk/
+  691  ls
+  692  vi q9
+  693  history | bq
+  694  history | grep bq
+  695  vi q13
+  696  vi q12
+  697  vi q11
+  698  vi q14
+  699  ls
+  700  vi q9
+  701  vu q13
+  702  cat q13
+  703  history
+  704  history | grep bq
+  705  ls
+  706  vi q4
+  707  vi q5
+  708  vi q6
+  709  vi q7
+  710  vi q8
+  711  vi q9
+  712  vi q10
+  713  vi q1
+  714  ls
+  715  cd ..
+  716  ls
+  717  cd w205
+  718  ls
+  719  cd assignment-04-rahul-kulkarni/
+  720  ls
+  721  ls -l
+  722  vi rahul-kulkarni.ipynb 
+  723  rm Rahul_Kulkarni_Assignment_04.ipynb 
+  724  ls
+  725  vi result.csv 
+  726  ls -l
+  727  date
+  728  export EDITOR=vi
+  729  git commit
+  730  git add Rahul_Kulkarni_Assignment_04.ipynb 
+  731  git commit
+  732  git push
+  733  pwd
+  734  ls
+  735  pwd
+  736  ls
+  737  cd w205
+  738  ls
+  739  clear
+  740  ls
+  741  cd redis-cluster/
+  742  ls
+  743  cat docker-compose.yml 
+  744  docker-compose up -d
+  745  docker-compose ps
+  746  docker-compose logs redis
+  747  ipython
+  748  docker-compose down
+  749  docker-compose ps
+  750  cp ../course-content/05-Storing-Data-II/example-1-docker-compose.yml docker-compose.yml
+  751  docker-compose up -d
+  752  cat docker-compose.yml 
+  753  docker-compose ps
+  754  docker-compose logs redis
+  755  docker-compose exec mids bash
+  756  docker-compose down
+  757  docker-compose ps
+  758  history | more
+  759  man docker-compise
+  760  man docker-compose
+  761  ls
+  762  cd ..
+  763  ls
+  764  cd assignment-05-rahul-kulkarni/
+  765  ls
+  766  mv rahul_kulkarni.md rahul_kulkarni-annotations.md
+  767  history > rahul-kulkarni-history.txt
+  768  vi rahul-kulkarni-history.txt 
+  769  ls
+  770  mv rahul_kulkarni-annotations.md rahul-kulkarni-annotations.md
+  771  ls
+  772  cp ../redis-cluster/docker-compose.yml .
+  773  vi docker-compose.yml 
+  774  ls
+  775  git status
+  776  git add docker-compose.yml 
+  777  git add rahul-kulkarni-annotations.md 
+  778  git add rahul-kulkarni-history.txt 
+  779  export EDITOR=vi
+  780  git commit
+  781  git push
+  782  git branch
+  783  pwd
+  784  ls
+  785  cd w205
+  786  ls
+  787  git clone https://github.com/mids-w205-crook/assignment-05-rahul-kulkarni.git
+  788  ls
+  789  cd assignment-05-rahul-kulkarni/
+  790  ls
+  791  vi htmartin-history.txt 
+  792  ls
+  793  clear
+  794  pwd
+  795  ls
+  796  pwd
+  797  ls
+  798  cd w205
+  799  ls
+  800  git clone https://github.com/mids-w205-crook/assignment-06-rahul-kulkarni.git
+  801  ls
+  802  cd assignment-06-rahul-kulkarni/
+  803  ls
+  804  cd ~/205/kafka
+  805  cd ..
+  806  ls
+  807  cd kafka/
+  808  ls
+  809  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/kafka/
+  810  ls
+  811  vi docker-compose.yml 
+  812  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+  813  ls
+  814  docker-compose up -d
+  815  docker-compose logs -f kafka
+  816  vi 
+  817  docker-compose exec kafka kafka-topics --create --topic asgn6 --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  818  docker-compose exec kafka kafka-topics --describe --topic asgn6 --zookeeper zookeeper:32181
+  819  ls -l
+  820  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json"
+  821  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.'"
+  822  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c"
+  823  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  824  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t asgn-6 && echo 'Produced 100 messages.'"
+  825  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic foo --from-beginning --max-messages 42
+  826  vi 
+  827  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic asgn-6 --from-beginning --max-messages 42
+  828  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t asgn-6 -o beginning -e" 
+  829  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t asgn-6 -o beginning -e"  | wc -l
+  830  history > rahul-kulkarni-history.txt
+  831  vi rahul-kulkarni-history.txt 
+  832  cp rahul-kulkarni-history.txt ../assignment-06-rahul-kulkarni/
+  833  cd ..
+  834  ls
+  835  cd assignment-06-rahul-kulkarni/
+  836  ls
+  837  cp htmartin-annotations.md rahul-kulkarni-annotations.md
+  838  ls
+  839  cd ..
+  840  ls
+  841  cd kafka/
+  842  ls
+  843  cd w205
+  844  ls
+  845  cd kafka/
+  846  ls
+  847  docker comppose ps
+  848  docker ps
+  849  docker compise ps
+  850  docker --help
+  851  docker-compose --help
+  852  docker-compose ps
+  853  clear
+  854  cat docker-compose.yml 
+  855  clear
+  856  ls
+  857  ls -lart
+  858  docker-compose up -d
+  859  docker-compose exec kafka kafka-topics --create --topic asgn6 --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  860  docker-compose exec kafka kafka-topics --describe --topic asgn6 --zookeeper zookeeper:32181
+  861  ls
+  862  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json"
+  863  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq '.'"
+  864  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c"
+  865  man kafkacat
+  866  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq 'l
+  867  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq '.[] | length' -c"
+  868  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq '.[] | flatten| length' -c"
+  869  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq '.[] | flatten | length' -c"
+  870  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c"
+  871  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq '.'"
+  872  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq 'keys | .[]' -c
+  873  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq 'keys | .[]' -c"
+  874  docker-compose exec kafka kafka-topics --describe --topic asgn6 --zookeeper zookeeper:32181
+  875  docker-compose exec mids bash -c "cat /w205/kafka/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t asgn-6 && echo 'Produce messages on kafka topic asgn-6'"
+  876  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic asgn-6 --from-beginning --max-messages 50
+  877  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t asgn-6 -o beginning -e" 
+  878  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t asgn-6 -o beginning -e" | wc -l
+  879  docker-compose --help
+  880  man kafkakat
+  881  man kafkacat
+  882  docker-compose down
+  883  history > rahul-kulkarni-history.txt 
+  884  vi rahul-kulkarni-history.txt 
+  885  ls
+  886  cp rahul-kulkarni-history.txt ../assignment-06-rahul-kulkarni/
+  887  cd ../assignment-06-rahul-kulkarni/
+  888  ls
+  889  git add .
+  890  export EDITOR=vi
+  891  git commit
+  892  git push
+  893  cp ../kafka/docker-compose.yml .
+  894  git add .
+  895  git commit
+  896  git push
+  897  xtitle SPARK
+  898  apt install xtitile
+  899  su apt install xtitle
+  900  su - apt install xtitle
+  901  apt install xtitle
+  902  ls
+  903  cd w205/spark-with-kafka-and-hdfs/
+  904  ls
+  905  docker-compose up -d
+  906  docker compose-ip
+  907  docker compose-up
+  908  docker-compose up -d
+  909  docker-compose 
+  910  docker-compose ps
+  911  docker-compose exec spark pyspark
+  912  cd w205/spark-with-kafka-and-hdfs/
+  913  ls
+  914  clear
+  915  docker-compose exec cloudera hadoop fs -ls /tmp/
+  916  docker-compose exec cloudera hadoop fs -ls /tmp/players/
+  917  docker-compose exec cloudera hadoop fs -ls /tmp/
+  918  docker-compose exec cloudera hadoop fs -ls /tmp/players
+  919  docker-compose exec cloudera hadoop fs -ls /tmp/
+  920  docker-compose exec cloudera hadoop fs -ls /tmp/commit
+  921  docker-compose exec cloudera hadoop fs -ls /tmp/commits
+  922  docker-compose down
+  923  ls
+  924  cd w207-rk/
+  925  ls
+  926  git status
+  927  clear
+  928  ls
+  929  cd ..
+  930  ls
+  931  cd w207
+  932  ls
+  933  cd ucb-w207-applied-ml/
+  934  ls
+  935  cd ..
+  936  ls
+  937  cd ..
+  938  ls
+  939  cd w207-MachineLearning-Projects/
+  940  ls
+  941  cd ..
+  942  ls
+  943  rm -rf w207-MachineLearning-Projects/
+  944  ls
+  945  cd w207-rk/
+  946  ls
+  947  clear
+  948  ls
+  949  cd ..
+  950  ls
+  951  cd w207-rk/
+  952  ls
+  953  pwd
+  954  ls
+  955  cd w205
+  956  ls
+  957  cd spark-with-kafka-and-hdfs/
+  958  ls
+  959  vi docker-compose.yml 
+  960  ls
+  961  pwd
+  962  ls
+  963  cd w205
+  964  ls
+  965  clear
+  966  ls
+  967  mkdir files 
+  968  mv *.json files
+  969  mv *.csc files
+  970  ls
+  971  mv *.csv files
+  972  ls
+  973  cd assignment-04-rahul-kulkarni/
+  974  ls
+  975  cd ..
+  976  ls
+  977  rm Rahul_Kulkarni_Assignment_04.ipynb 
+  978  ls
+  979  clear
+  980  ls
+  981  git clone https://github.com/mids-w205-crook/assignment-07-rahul-kulkarni.git
+  982  ls
+  983  cd assignment-07-rahul-kulkarni/
+  984  ls
+  985  cd ..
+  986  ls
+  987  cd ..
+  988  ls
+  989  rm -rf w207-rk/
+  990  ls
+  991  cd w205
+  992  ls
+  993  d spark-with-kafkacd spark-with-kafkacd 
+  994  ls
+  995  cd spark-with-kafka
+  996  ls
+  997  vi docker-compose.yml 
+  998  ls
+  999  docker-compose ps
+ 1000  docker-compise up -d
+ 1001  docker-compose up -d
+ 1002  cd ..
+ 1003  ls
+ 1004  cd files/
+ 1005  ls
+ 1006  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+ 1007  ls
+ 1008  vi assessment-attempts-20180128-121051-nested.json 
+ 1009  ls
+ 1010  cd ..
+ 1011  ls
+ 1012  cd spark-with-kafka
+ 1013  ls
+ 1014  docker-compose logs -f kafka
+ 1015  docker-compose exec kafka kafka-topics --create --topic assgn-7 --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1016  docker-compose exec kafka kafka-topics --describe --topic assgn-7 --zookeeper zookeeper:32181
+ 1017  ocker-compose exec mids bash -c "cat /w205/files/
+ 1018  ls -l /w205/files
+ 1019  cd ..
+ 1020  ls
+ 1021  cd files
+ 1022  ls
+ 1023  cd ../
+ 1024  cd spark-with-kafka
+ 1025  ls
+ 1026  docker-compose exec mids bash -c "cat ~/w205/files/assessment-attempts-20180128-121051-nested.json"
+ 1027  ls -l ~/w205/files/assessment-attempts-20180128-121051-nested.json 
+ 1028  docker-compose exec mids bash -c "cat ~/w205/files/assessment-attempts-20180128-121051-nested.json"
+ 1029  cd ..
+ 1030  ls
+ 1031  mv files/assessment-attempts-20180128-121051-nested.json .
+ 1032  ls
+ 1033  cd spark-with-kafka
+ 1034  ls
+ 1035  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json"
+ 1036  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c"
+ 1037  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c" | more
+ 1038  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[0]'" 
+ 1039  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[0]' | {user_incomplete: .sequences " 
+ 1040  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[0] | {user_incomplete: .sequences}' 
+ 1041  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[0] | {user_incomplete: .sequences}'" 
+ 1042  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[0]'" 
+ 1043  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[0] | {sequences: .sequences}'" 
+ 1044  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[0] | {sequences: .sequences, parents: .sequences.questions[].user_incomplete}'" 
+ 1045  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[0] | {user_incomplete: .sequences.questions[].user_incomplete}'" 
+ 1046  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[.[] | {user_incomplete: .sequences.questions[].user_incomplete}]'" 
+ 1047  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[] | {user_incomplete: .sequences.questions[].user_incomplete}'" 
+ 1048  history
+ 1049  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[0]'" 
+ 1050  history
+ 1051  docker-compose exec kafka kafka-topics --describe --topic assgn-7 --zookeeper zookeeper:32181
+ 1052  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[] | {user_incomplete: .sequences.questions[].user_incomplete}'" 
+ 1053  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[] | {user_incomplete: .sequences.questions[].user_incomplete}'" | wc
+ 1054  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[] | {user_incomplete: .sequences.questions[].user_incomplete}'" | wc -l
+ 1055  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[] | {user_incomplete: .sequences.questions[].user_incomplete}' -c | kafkacat -P -b kafka:29092 -t assgn-7 && echo 'Produced 44151 messages.'"
+ 1056  docker-compose exec spark pyspark
+ 1057  ls
+ 1058  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[]'" 
+ 1059  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[]'  -c | kafkacat -P -b kafka:29092 -t assgn-7  && echo 'Produced messages'"
+ 1060  docker-compose exec spark pyspark
+ 1061  history
+ 1062  docker-compose exec kafka kafka-topics --describe --topic assgn-7 --zookeeper zookeeper:32181
+ 1063  docker-compose down
+ 1064  docker-compose up
+ 1065  docker-compose os
+ 1066  docker-compose ps
+ 1067  docker compose down
+ 1068  docker-compose down
+ 1069  docker-compose ps
+ 1070  docker-compose up
+ 1071  docker ps
+ 1072  cd ..
+ 1073  ls
+ 1074  cd spark-with-kafka
+ 1075  ls
+ 1076  docker-compose up -d
+ 1077  docker-compose logs -f kafka
+ 1078  docker-compose exec kafka kafka-topics --create --topic mids-205-7 --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1079  docker-compose exec kafka kafka-topics --describe --topic mids-205-7 --zookeeper zookeeper:32181
+ 1080  ocker-compose exec mids bash -c "cat /w205/
+ 1081  ls -l ~/w205/assessment-attempts-20180128-121051-nested.json 
+ 1082  docker-compose exec mids bash -c "cat /w205/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t mids-205-7 && echo 'Produced messages.'"
+ 1083  docker-compose exec spark pyspark
+ 1084  history
+ 1085  history > rahul-kulkarni-history.txt
